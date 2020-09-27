@@ -2,6 +2,7 @@ require 'open-uri'
 require 'pry'
 
 class Scraper
+  
    students_hash = []
     html = Nokogiri::HTML(open(index_url))
     html.css(".student-card").collect do |student|
